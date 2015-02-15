@@ -1,0 +1,14 @@
+require './ui_confirm_tour_request'
+
+class ConfirmTourRequest <  Qt::Frame
+
+  def initialize(parent=nil)
+    super(parent)
+    @ui = Ui::Frame.new
+    @ui.setup_ui(self)
+  end
+
+  def initialize(@customer_name,@date,@no_of_days,@time,@location,parent=nil)
+    initilaize(parent)
+  end
+end

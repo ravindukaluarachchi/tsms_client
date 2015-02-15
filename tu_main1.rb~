@@ -1,0 +1,101 @@
+=begin
+** Form generated from reading ui file 'main1.ui'
+**
+** Created: Wed Dec 4 15:15:03 2013
+**      by: Qt User Interface Compiler version 4.8.5
+**
+** WARNING! All changes made in this file will be lost when recompiling ui file!
+=end
+
+require 'Qt4'
+
+class Ui_MainWindow
+    attr_reader :actionExit
+    attr_reader :actionTour_Requests
+    attr_reader :actionAdd_Tour
+    attr_reader :actionView_Tours
+    attr_reader :actionView_Confirmed_Tours
+    attr_reader :centralwidget
+    attr_reader :menubar
+    attr_reader :menuFile
+    attr_reader :menuTours
+    attr_reader :statusbar
+
+    def setupUi(mainWindow)
+    if mainWindow.objectName.nil?
+        mainWindow.objectName = "mainWindow"
+    end
+    mainWindow.resize(800, 600)
+    @actionExit = Qt::Action.new(mainWindow)
+    @actionExit.objectName = "actionExit"
+    @actionTour_Requests = Qt::Action.new(mainWindow)
+    @actionTour_Requests.objectName = "actionTour_Requests"
+    @actionAdd_Tour = Qt::Action.new(mainWindow)
+    @actionAdd_Tour.objectName = "actionAdd_Tour"
+    @actionView_Tours = Qt::Action.new(mainWindow)
+    @actionView_Tours.objectName = "actionView_Tours"
+    @actionView_Confirmed_Tours = Qt::Action.new(mainWindow)
+    @actionView_Confirmed_Tours.objectName = "actionView_Confirmed_Tours"
+    @centralwidget = Qt::Widget.new(mainWindow)
+    @centralwidget.objectName = "centralwidget"
+    mainWindow.centralWidget = @centralwidget
+    @menubar = Qt::MenuBar.new(mainWindow)
+    @menubar.objectName = "menubar"
+    @menubar.geometry = Qt::Rect.new(0, 0, 800, 27)
+    @menuFile = Qt::Menu.new(@menubar)
+    @menuFile.objectName = "menuFile"
+    @menuTours = Qt::Menu.new(@menubar)
+    @menuTours.objectName = "menuTours"
+    mainWindow.setMenuBar(@menubar)
+    @statusbar = Qt::StatusBar.new(mainWindow)
+    @statusbar.objectName = "statusbar"
+    mainWindow.statusBar = @statusbar
+
+    @menubar.addAction(@menuFile.menuAction())
+    @menubar.addAction(@menuTours.menuAction())
+    @menuFile.addAction(@actionExit)
+    @menuTours.addAction(@actionTour_Requests)
+    @menuTours.addSeparator()
+    @menuTours.addAction(@actionAdd_Tour)
+    @menuTours.addAction(@actionView_Tours)
+    @menuTours.addAction(@actionView_Confirmed_Tours)
+
+    retranslateUi(mainWindow)
+
+    Qt::MetaObject.connectSlotsByName(mainWindow)
+    end # setupUi
+
+    def setup_ui(mainWindow)
+        setupUi(mainWindow)
+    end
+
+    def retranslateUi(mainWindow)
+    mainWindow.windowTitle = Qt::Application.translate("MainWindow", "Tours Center", nil, Qt::Application::UnicodeUTF8)
+    @actionExit.text = Qt::Application.translate("MainWindow", "Exit", nil, Qt::Application::UnicodeUTF8)
+    @actionTour_Requests.text = Qt::Application.translate("MainWindow", "Tour Requests", nil, Qt::Application::UnicodeUTF8)
+    @actionAdd_Tour.text = Qt::Application.translate("MainWindow", "Add Tour", nil, Qt::Application::UnicodeUTF8)
+    @actionView_Tours.text = Qt::Application.translate("MainWindow", "View Pending Tours", nil, Qt::Application::UnicodeUTF8)
+    @actionView_Confirmed_Tours.text = Qt::Application.translate("MainWindow", "View Confirmed Tours", nil, Qt::Application::UnicodeUTF8)
+    @menuFile.title = Qt::Application.translate("MainWindow", "File", nil, Qt::Application::UnicodeUTF8)
+    @menuTours.title = Qt::Application.translate("MainWindow", "Tours", nil, Qt::Application::UnicodeUTF8)
+    end # retranslateUi
+
+    def retranslate_ui(mainWindow)
+        retranslateUi(mainWindow)
+    end
+
+end
+
+module Ui
+    class MainWindow < Ui_MainWindow
+    end
+end  # module Ui
+
+if $0 == __FILE__
+    a = Qt::Application.new(ARGV)
+    u = Ui_MainWindow.new
+    w = Qt::MainWindow.new
+    u.setupUi(w)
+    w.show
+    a.exec
+end

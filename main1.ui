@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>985</width>
+    <height>669</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tsms Client</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QMdiArea" name="marea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>985</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <widget class="QMenu" name="menuDriver">
+     <property name="title">
+      <string>Driver</string>
+     </property>
+     <addaction name="actionAdd_New_Driver"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Drivers"/>
+    </widget>
+    <widget class="QMenu" name="menuTours_2">
+     <property name="title">
+      <string>Tours</string>
+     </property>
+     <addaction name="actionTour_Requests"/>
+     <addaction name="separator"/>
+     <addaction name="actionAdd_Tour"/>
+     <addaction name="actionView_Tours"/>
+     <addaction name="actionView_Confirmed_Tours"/>
+    </widget>
+    <widget class="QMenu" name="menuLocation">
+     <property name="title">
+      <string>Locations</string>
+     </property>
+     <addaction name="actionAdd_New_Location"/>
+     <addaction name="actionView_Locations"/>
+    </widget>
+    <widget class="QMenu" name="menuVehicle">
+     <property name="title">
+      <string>Vehicle</string>
+     </property>
+     <addaction name="actionAdd_Vehicle"/>
+     <addaction name="actionView_Vehicles"/>
+     <addaction name="separator"/>
+     <addaction name="actionAdd_Expense"/>
+     <addaction name="actionView_Expenses"/>
+    </widget>
+    <widget class="QMenu" name="menuCustomers">
+     <property name="title">
+      <string>Customers</string>
+     </property>
+     <addaction name="actionAdd_Customer"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Customers"/>
+    </widget>
+    <widget class="QMenu" name="menuSuppliers">
+     <property name="title">
+      <string>Suppliers</string>
+     </property>
+     <addaction name="actionAdd_Supplier"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Supplier"/>
+    </widget>
+    <widget class="QMenu" name="menuExpense_Types">
+     <property name="title">
+      <string>Expense Types</string>
+     </property>
+     <addaction name="actionAdd_Expense_Type"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Expense_Type"/>
+    </widget>
+    <addaction name="menuDriver"/>
+    <addaction name="menuTours_2"/>
+    <addaction name="menuVehicle"/>
+    <addaction name="menuCustomers"/>
+    <addaction name="menuSuppliers"/>
+    <addaction name="separator"/>
+    <addaction name="menuLocation"/>
+    <addaction name="menuExpense_Types"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuActions"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionTour_Requests">
+   <property name="text">
+    <string>Tour Requests</string>
+   </property>
+  </action>
+  <action name="actionAdd_Tour">
+   <property name="text">
+    <string>Add Tour</string>
+   </property>
+  </action>
+  <action name="actionView_Tours">
+   <property name="text">
+    <string>View Pending Tours</string>
+   </property>
+  </action>
+  <action name="actionView_Confirmed_Tours">
+   <property name="text">
+    <string>View Confirmed Tours</string>
+   </property>
+  </action>
+  <action name="actionView_Drivers">
+   <property name="text">
+    <string>View Drivers</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Driver">
+   <property name="text">
+    <string>Add New Driver</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Location">
+   <property name="text">
+    <string>Add New Location</string>
+   </property>
+  </action>
+  <action name="actionView_Locations">
+   <property name="text">
+    <string>View Locations</string>
+   </property>
+  </action>
+  <action name="actionAdd_Vehicle">
+   <property name="text">
+    <string>Add Vehicle</string>
+   </property>
+  </action>
+  <action name="actionView_Vehicles">
+   <property name="text">
+    <string>View Vehicles</string>
+   </property>
+  </action>
+  <action name="actionMonthly_Income_Report">
+   <property name="text">
+    <string>Monthly Income Report</string>
+   </property>
+  </action>
+  <action name="actionVehicle_Expense_Report">
+   <property name="text">
+    <string>Vehicle Expense Report</string>
+   </property>
+  </action>
+  <action name="actionAdd_Customer">
+   <property name="text">
+    <string>Add Customer</string>
+   </property>
+  </action>
+  <action name="actionView_Customers">
+   <property name="text">
+    <string>View Customers</string>
+   </property>
+  </action>
+  <action name="actionAdd_Supplier">
+   <property name="text">
+    <string>Add Supplier</string>
+   </property>
+  </action>
+  <action name="actionView_Supplier">
+   <property name="text">
+    <string>View Supplier</string>
+   </property>
+  </action>
+  <action name="actionAdd_Expense_Type">
+   <property name="text">
+    <string>Add Expense Type</string>
+   </property>
+  </action>
+  <action name="actionView_Expense_Type">
+   <property name="text">
+    <string>View Expense Type</string>
+   </property>
+  </action>
+  <action name="actionAdd_Rate_Type">
+   <property name="text">
+    <string>Add Rate Type</string>
+   </property>
+  </action>
+  <action name="actionView_Rate_Tyoes">
+   <property name="text">
+    <string>View Rate Types</string>
+   </property>
+  </action>
+  <action name="actionAdd_Expense">
+   <property name="text">
+    <string>Add Expense</string>
+   </property>
+  </action>
+  <action name="actionView_Expenses">
+   <property name="text">
+    <string>View Expenses</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
